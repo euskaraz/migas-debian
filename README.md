@@ -13,6 +13,8 @@ ADI!!: aurreko pausuaren arabera aukeratu dagokion migasfree-play_1.5.0.1_xxx.de
 
     <code>    dpkg -i migasfree-client_4.18-1_all.deb </code>
 
+    Arkitekturaren arabera 386 edo amd64 paketea instalatu.
+    
     <code>    dpkg -i migasfree-play_1.5.0.1_xxx.deb </code>
 
     <code>    dpkg -i aek89*.deb </code>
@@ -23,3 +25,14 @@ ADI!!: aurreko pausuaren arabera aukeratu dagokion migasfree-play_1.5.0.1_xxx.de
     <code> # apt -f install </code>
     
     eta beharrezko pakete guztiak instalatuko dira.
+ 
+5. Migasfree automatiko abiatu ahal izateko WAYLAND desgaitu.
+
+    <code> # nano /etc/gdm3/daemon.conf </code>
+    WAYLAND ENABLE=FALSE lerroa deskomentatu
+
+6. Erabiltzaile zerrenda desgaitu saioa hasteko pantailan.
+
+    <code> # nano /etc/gdm3/greeter.dconf-defaults</code>
+    #- disable-user-list=true lerroa deskomentatu
+    
